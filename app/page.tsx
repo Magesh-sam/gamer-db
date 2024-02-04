@@ -36,6 +36,13 @@ async function page() {
         <h2 className="text-2xl font-semibold mb-4 f  irst-letter:text-primary">
           Top Rated Games
         </h2>
+
+
+
+
+
+
+        
         <Suspense fallback={<div>Loading...</div>}>
           <TopGamesCarousel games={topRatedGames} />
         </Suspense>
