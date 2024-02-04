@@ -6,14 +6,14 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from '@/components/ui/carousel';
-import { TopGamesCardProps } from '@/lib/types';
-import TopGamesCard from './TopGamesCard';
+import { NewUpcomingGameCardProps } from '@/lib/types';
+import TopGamesCard from './NewUpcomingGameCard';
 import Autoplay from 'embla-carousel-autoplay';
 import { WheelGesturesPlugin } from 'embla-carousel-wheel-gestures';
 
 import { useRef } from 'react';
 
-function TopGamesCarousel({ games }: { games: TopGamesCardProps[] }) {
+function NewUpcomingGameCarousel({ games }: { games: NewUpcomingGameCardProps[] }) {
   const plugin = useRef(Autoplay({ delay: 2000, stopOnInteraction: false }));
   return (
     <Carousel
@@ -33,4 +33,4 @@ function TopGamesCarousel({ games }: { games: TopGamesCardProps[] }) {
   );
 }
 
-export default TopGamesCarousel;
+export default NewUpcomingGameCarousel;

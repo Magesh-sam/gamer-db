@@ -1,8 +1,8 @@
 import React, { Suspense } from 'react';
 import RAWG from '@/lib/axios';
-import Image from 'next/image';
-import TopGamesCarousel from '@/components/ui/TopRatedGames/TopGamesCarousel';
-import { TopGamesCardProps } from '@/lib/types';
+import { NewUpcomingGameCardProps } from '@/lib/types';
+import NewUpcomingGameCarousel from '@/components/ui/NewUpcomingGames/NewUpcomingGameCarousel';
+import GameCardContainer from '@/components/ui/GameCard/GameCardContainer';
 
 interface IGame {
   id: number;
@@ -11,22 +11,27 @@ interface IGame {
 }
 
 async function page() {
-  const topRatedGames: TopGamesCardProps[] = [];
+  const newUpcomingGames: NewUpcomingGameCardProps[] = [];
 
   try {
-    const data = await RAWG.get('games');
+    const data = await RAWG.get('games', {
+      params: {
+        "dates": `${new Date().getFullYear()}-10-10,${new Date().getFullYear()+1}-10-10`,
+        "ordering": "-added",
+        "page_size":"7"
+      },
+    });
     const gamesData = await data.data.results;
     gamesData.forEach((game: IGame) => {
-      topRatedGames.push({
+      newUpcomingGames.push({
         id: game.id,
         name: game.name,
         img: game.background_image,
       });
     });
   } catch (error) {
-    console.log(error);
+    console.log("error",error);
   }
-
   return (
     <main className="flex flex-col container mt-14 ">
       <h1 className="text-center text-5xl font-bold my-5 text-primary">
@@ -35,11 +40,20 @@ async function page() {
 
       <section className="container mx-auto">
         <h2 className="text-2xl font-semibold mb-4 f  irst-letter:text-primary">
-          Top Rated Games
+          New Upcoming Games!
         </h2>
-
+       
         <Suspense fallback={<div>Loading...</div>}>
-          <TopGamesCarousel games={topRatedGames} />
+          
+
+          <NewUpcomingGameCarousel games={newUpcomingGames} />
+          
+        </Suspense>
+        <Suspense fallback={<div>Loading...</div>}>
+          
+
+          <GameCardContainer/>
+          
         </Suspense>
       </section>
     </main>

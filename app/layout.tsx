@@ -1,11 +1,16 @@
 import type { Metadata } from 'next';
-import { Inter } from 'next/font/google';
 import './globals.css';
 import { cn } from '@/lib/utils';
 import Navbar from '@/components/Navbar';
 import Wrapper from '@/components/Wrapper';
 
-const inter = Inter({ subsets: ['latin'] });
+import { Roboto } from 'next/font/google'
+ 
+const roboto = Roboto({
+  weight: ['400', '700'],
+  subsets: ['latin'],
+  display: 'swap',
+})
 
 export const metadata: Metadata = {
   title: 'Gamer DB',
@@ -22,7 +27,7 @@ export default function RootLayout({
       <body
         className={cn(
           'min-h-screen bg-background  antialiased',
-          inter.className,
+          roboto.className,
         )}
       >
         <Wrapper>

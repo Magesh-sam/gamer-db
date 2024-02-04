@@ -1,8 +1,8 @@
-import { TopGamesCardProps } from '@/lib/types';
+import { NewUpcomingGameCardProps } from '@/lib/types';
 import Image from 'next/image';
 import React from 'react';
 
-function TopGamesCard({ name, img }: TopGamesCardProps) {
+function NewUpcomingGameCard({ name, img }: NewUpcomingGameCardProps) {
   return (
     <div className="relative rounded-md  h-48 sm:h-60 md:h-80 lg:h-[400px] ">
       <Image
@@ -20,4 +20,4 @@ function TopGamesCard({ name, img }: TopGamesCardProps) {
   );
 }
 
-export default TopGamesCard;
+export default NewUpcomingGameCard;
