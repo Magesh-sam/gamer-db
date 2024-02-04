@@ -9,7 +9,7 @@ export default function Loading() {
       <Skeleton className="h-5 w-full mb-4" />
 
       <Skeleton className="w-full h-48" />
-      <LoadMoreSkeleton/>
+      <LoadMoreSkeleton />
     </main>
   );
 }

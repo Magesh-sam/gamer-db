@@ -13,7 +13,11 @@ import { WheelGesturesPlugin } from 'embla-carousel-wheel-gestures';
 
 import { useRef } from 'react';
 
-function NewUpcomingGameCarousel({ games }: { games: NewUpcomingGameCardProps[] }) {
+function NewUpcomingGameCarousel({
+  games,
+}: {
+  games: NewUpcomingGameCardProps[];
+}) {
   const plugin = useRef(Autoplay({ delay: 2000, stopOnInteraction: false }));
   return (
     <Carousel

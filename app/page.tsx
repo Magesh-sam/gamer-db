@@ -16,9 +16,9 @@ async function page() {
   try {
     const data = await RAWG.get('games', {
       params: {
-        "dates": `${new Date().getFullYear()}-10-10,${new Date().getFullYear()+1}-10-10`,
-        "ordering": "-added",
-        "page_size":"7"
+        dates: `${new Date().getFullYear()}-10-10,${new Date().getFullYear() + 1}-10-10`,
+        ordering: '-added',
+        page_size: '7',
       },
     });
     const gamesData = await data.data.results;
@@ -30,7 +30,7 @@ async function page() {
       });
     });
   } catch (error) {
-    console.log("error",error);
+    console.log('error', error);
   }
   return (
     <main className="flex flex-col container mt-14 ">
@@ -42,18 +42,12 @@ async function page() {
         <h2 className="text-2xl font-semibold mb-4 f  irst-letter:text-primary">
           New Upcoming Games!
         </h2>
-       
-        <Suspense fallback={<div>Loading...</div>}>
-          
 
+        <Suspense fallback={<div>Loading...</div>}>
           <NewUpcomingGameCarousel games={newUpcomingGames} />
-          
         </Suspense>
         <Suspense fallback={<div>Loading...</div>}>
-          
-
-          <GameCardContainer/>
-          
+          <GameCardContainer />
         </Suspense>
       </section>
     </main>

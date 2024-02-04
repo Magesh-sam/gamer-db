@@ -4,13 +4,13 @@ import { cn } from '@/lib/utils';
 import Navbar from '@/components/Navbar';
 import Wrapper from '@/components/Wrapper';
 
-import { Roboto } from 'next/font/google'
- 
+import { Roboto } from 'next/font/google';
+
 const roboto = Roboto({
   weight: ['400', '700'],
   subsets: ['latin'],
   display: 'swap',
-})
+});
 
 export const metadata: Metadata = {
   title: 'Gamer DB',
