@@ -7,9 +7,9 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "prettier": "prettier --write --single-quote --trailing-comma '**/*.{js,ts,jsx,tsx,css,less,scss,json,md}'",
+    "prettier": "prettier --write --single-quote  '**/*.{js,ts,jsx,tsx,css,less,scss,json,md}'",
     "prepare": "husky",
-    "precommit" :"pnpm run lint && pnpm run prettier"
+    "precommit": "pnpm run lint && pnpm run prettier"
   },
   "dependencies": {
     "@radix-ui/react-dialog": "^1.0.5",

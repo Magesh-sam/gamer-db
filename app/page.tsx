@@ -1,8 +1,8 @@
-import React, { Suspense } from "react";
-import RAWG from "@/lib/axios";
-import Image from "next/image";
-import TopGamesCarousel from "@/components/ui/TopRatedGames/TopGamesCarousel";
-import { TopGamesCardProps } from "@/lib/types";
+import React, { Suspense } from 'react';
+import RAWG from '@/lib/axios';
+import Image from 'next/image';
+import TopGamesCarousel from '@/components/ui/TopRatedGames/TopGamesCarousel';
+import { TopGamesCardProps } from '@/lib/types';
 
 interface IGame {
   id: number;
@@ -14,7 +14,7 @@ async function page() {
   const topRatedGames: TopGamesCardProps[] = [];
 
   try {
-    const data = await RAWG.get("games");
+    const data = await RAWG.get('games');
     const gamesData = await data.data.results;
     gamesData.forEach((game: IGame) => {
       topRatedGames.push({
@@ -33,14 +33,14 @@ async function page() {
         Gamer-DB
       </h1>
       <section className="container mx-auto">
-                                        <h2 className="text-2xl font-semibold mb-4 f  irst-letter:text-primary">
+        <h2 className="text-2xl font-semibold mb-4 f  irst-letter:text-primary">
           Top Rated Games
         </h2>
-                                  <Suspense fallback={<div>Loading...</div>}>
-                                     <TopGamesCarousel games={topRatedGames} />
+        <Suspense fallback={<div>Loading...</div>}>
+          <TopGamesCarousel games={topRatedGames} />
         </Suspense>
       </section>
-                                                         </main>
+    </main>
   );
 }
 

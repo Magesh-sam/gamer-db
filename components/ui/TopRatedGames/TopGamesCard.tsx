@@ -1,6 +1,6 @@
-import { TopGamesCardProps } from "@/lib/types";
-import Image from "next/image";
-import React from "react";
+import { TopGamesCardProps } from '@/lib/types';
+import Image from 'next/image';
+import React from 'react';
 
 function TopGamesCard({ name, img }: TopGamesCardProps) {
   return (

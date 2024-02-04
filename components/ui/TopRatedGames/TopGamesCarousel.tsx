@@ -1,17 +1,17 @@
-"use client";
+'use client';
 import {
   Carousel,
   CarouselContent,
   CarouselItem,
   CarouselNext,
   CarouselPrevious,
-} from "@/components/ui/carousel";
-import { TopGamesCardProps } from "@/lib/types";
-import TopGamesCard from "./TopGamesCard";
-import Autoplay from "embla-carousel-autoplay";
-import { WheelGesturesPlugin } from "embla-carousel-wheel-gestures";
+} from '@/components/ui/carousel';
+import { TopGamesCardProps } from '@/lib/types';
+import TopGamesCard from './TopGamesCard';
+import Autoplay from 'embla-carousel-autoplay';
+import { WheelGesturesPlugin } from 'embla-carousel-wheel-gestures';
 
-import { useRef } from "react";
+import { useRef } from 'react';
 
 function TopGamesCarousel({ games }: { games: TopGamesCardProps[] }) {
   const plugin = useRef(Autoplay({ delay: 2000, stopOnInteraction: false }));

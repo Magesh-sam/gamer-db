@@ -1,5 +1,5 @@
-import Link from "next/link";
-import React from "react";
+import Link from 'next/link';
+import React from 'react';
 
 const Logo = () => (
   <svg
@@ -10,7 +10,7 @@ const Logo = () => (
     width={30}
     height={30}
   >
-    <title>{"game"}</title>
+    <title>{'game'}</title>
     <path d="M4.469 8.156v-2.25h2.25v2.25h-2.25zm11.219-2.25h2.219v2.25h-2.219v-2.25zm4.468 6.719V8.156h2.25v8.969h-2.25v2.219h-2.25v2.25h2.25v2.25h2.25v2.219h-4.5v-2.219h-2.219v-2.25H6.718v2.25h-2.25v2.219H-.001v-2.219h2.25v-2.25h2.219v-2.25H2.249v-2.219h-2.25V8.156h2.25v4.469h2.219v-2.219h2.25v-2.25h2.25v2.25h4.469v-2.25h2.25v2.25h2.219v2.219h2.25zm-11.187 2.25v-2.25h-2.25v2.25h2.25zm6.719 0v-2.25h-2.25v2.25h2.25z" />
   </svg>
 );
