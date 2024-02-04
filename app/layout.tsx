@@ -25,11 +25,6 @@ export default function RootLayout({
           inter.className,
         )}
       >
-       
-       
-       
-       
-       
         <Wrapper>
           <Navbar />
           {children}

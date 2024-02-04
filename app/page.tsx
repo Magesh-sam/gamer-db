@@ -37,12 +37,6 @@ async function page() {
           Top Rated Games
         </h2>
 
-
-
-
-
-
-        
         <Suspense fallback={<div>Loading...</div>}>
           <TopGamesCarousel games={topRatedGames} />
         </Suspense>
