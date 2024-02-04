@@ -7,19 +7,8 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "prettier": "prettier --write --single-quote --trailing-comma '**/*.{js,ts,jsx,tsx,css,less,scss,json,md}'"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged",
-      "pre-push": "lint-staged"
-    }
-  },
-  "lint-staged": {
-    "*.{js,ts,jsx,tsx,css,less,scss,json,md}": [
-      "pnpm run lint && pnpm run prettier",
-      "git add"
-    ]
+    "prettier": "prettier --write --single-quote --trailing-comma '**/*.{js,ts,jsx,tsx,css,less,scss,json,md}'",
+    "prepare": "husky"
   },
   "dependencies": {
     "@radix-ui/react-dialog": "^1.0.5",
