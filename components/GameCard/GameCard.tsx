@@ -6,17 +6,20 @@ import React from 'react';
 function GameCard({ slug, name, img, genres }: GameCardProps) {
   return (
     <div className="flex flex-col max-w-[300px]">
-      <Link href={`/${slug}`} className="mt-3 text-xl text-primary hover:text-primary/80">
-      <Image
-        src={img || '/placeholder.webp'}
-        alt="gamer db logo"
-        width={300}
-        height={230}
-        className=" rounded-sm object-fill w-[300px] h-[230px]"
-        placeholder="blur"
-        blurDataURL={img || '/placeholder.webp'}
-      />
-        <span className='mt-2'>{name}</span>
+      <Link
+        href={`/${slug}`}
+        className="mt-3 text-xl text-primary hover:text-primary/80"
+      >
+        <Image
+          src={img || '/placeholder.webp'}
+          alt="gamer db logo"
+          width={300}
+          height={230}
+          className=" rounded-sm object-fill w-[300px] h-[230px]"
+          placeholder="blur"
+          blurDataURL={img || '/placeholder.webp'}
+        />
+        <span className="mt-2">{name}</span>
       </Link>
 
       {genres?.length > 0 && (

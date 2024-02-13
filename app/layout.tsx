@@ -16,10 +16,11 @@ const roboto = Roboto({
 export const metadata: Metadata = {
   title: 'Gamer DB',
   description: "Gamer's Paradise - Find your favourite games all at one place!",
-  manifest: "mainfest.json",
+  manifest: 'mainfest.json',
   openGraph: {
     title: 'Gamer DB',
-    description: "Gamer's Paradise - Find your favourite games all at one place!",
+    description:
+      "Gamer's Paradise - Find your favourite games all at one place!",
     url: 'https://gamer-db.vercel.app/',
     siteName: 'Gamer DB',
     images: [
@@ -46,7 +47,8 @@ export const metadata: Metadata = {
   twitter: {
     title: 'Gamer DB',
     card: 'summary_large_image',
-    description: "Gamer's Paradise - Find your favourite games all at one place!",
+    description:
+      "Gamer's Paradise - Find your favourite games all at one place!",
     images: ['/placeholder.webp'],
   },
 };
@@ -60,7 +62,6 @@ export default function RootLayout({
     <html lang="en" className="dark">
       <head>
         <meta name="theme-color" content="#CCA715" />
-
       </head>
       <body
         className={cn(
@@ -70,7 +71,7 @@ export default function RootLayout({
       >
         <Wrapper>
           <Navbar />
-          <Sidebar/>
+          <Sidebar />
           {children}
         </Wrapper>
       </body>

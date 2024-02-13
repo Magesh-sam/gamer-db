@@ -40,7 +40,7 @@ async function page() {
 
       <section className="container mx-auto">
         <h2 className="text-2xl font-semibold mb-4 first-letter:text-primary text-white/90">
-          New Upcoming Games <span className='text-primary'>!</span>
+          New Upcoming Games <span className="text-primary">!</span>
         </h2>
 
         <Suspense fallback={<div>Loading...</div>}>

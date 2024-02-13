@@ -7,8 +7,7 @@ import GameCard from './GameCard';
 import axios from 'axios';
 import LoadMoreSkeleton from '@/components/Skeletons/LoadMoreSkeleton';
 
-
-const APIKEY = process.env.NEXT_PUBLIC_RAWG_API_KEY
+const APIKEY = process.env.NEXT_PUBLIC_RAWG_API_KEY;
 interface IGameCard {
   id: number;
   name: string;
@@ -22,7 +21,6 @@ interface IGameCard {
 }
 
 const fetchGames = async ({ pageParam }: { pageParam: number }) => {
-
   return axios
     .get(
       `https://api.rawg.io/api/games?key=${APIKEY}&page=${pageParam}&page_size=40`,
@@ -43,18 +41,23 @@ function GameCardContainer() {
   } = useInfiniteQuery({
     queryKey: ['projects'],
     queryFn: fetchGames,
-    refetchOnWindowFocus:false,
+    refetchOnWindowFocus: false,
     initialPageParam: 1,
     getNextPageParam: (lastPage) => lastPage.next,
-    
   });
 
   if (isLoading) {
     return <LoadMoreSkeleton />;
   }
   if (isError) {
-    return <p className='bg-red-400 text-black  font-semibold
-     w-full text-center px-3 py-2 '>Error: {error.message}</p>;
+    return (
+      <p
+        className="bg-red-400 text-black  font-semibold
+     w-full text-center px-3 py-2 "
+      >
+        Error: {error.message}
+      </p>
+    );
   }
 
   return (

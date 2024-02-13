@@ -22,7 +22,7 @@ function Navbar() {
           Gamer DB
         </Link>
       </div>
-      <Sidebar/>
+      <Sidebar />
     </nav>
   );
 }
