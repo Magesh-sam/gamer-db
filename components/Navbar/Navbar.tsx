@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
+import Sidebar from './Sidebar';
 
 function Navbar() {
   return (
@@ -21,6 +22,7 @@ function Navbar() {
           Gamer DB
         </Link>
       </div>
+      <Sidebar/>
     </nav>
   );
 }

@@ -33,13 +33,13 @@ async function page() {
     console.log('error', error);
   }
   return (
-    <main className="flex flex-col container mt-14 ">
+    <main className="flex flex-col container mt-20 ">
       <h1 className="text-center text-5xl font-bold my-5 text-primary">
         Gamer-DB
       </h1>
 
       <section className="container mx-auto">
-        <h2 className="text-2xl font-semibold mb-4 first-letter:text-primary">
+        <h2 className="text-2xl font-semibold mb-4 first-letter:text-primary text-white/90">
           New Upcoming Games <span className='text-primary'>!</span>
         </h2>
 

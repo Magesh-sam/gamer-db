@@ -57,3 +57,19 @@
     @apply bg-background text-foreground;
   }
 }
+
+::-webkit-scrollbar {
+  /* Customize the scrollbar */
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  /* Customize the scrollbar track */
+  background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  /* Customize the scrollbar thumb */
+  background-color: hsl(48, 64%, 51%);
+  border-radius: 4px;
+}

@@ -1,10 +1,11 @@
 import type { Metadata } from 'next';
 import './globals.css';
 import { cn } from '@/lib/utils';
-import Navbar from '@/components/Navbar';
+import Navbar from '@/components/Navbar/Navbar';
 import Wrapper from '@/components/Wrapper';
 
 import { Roboto } from 'next/font/google';
+import Sidebar from '@/components/SideNavbar/SideNavbar';
 
 const roboto = Roboto({
   weight: ['400', '700'],
@@ -63,12 +64,13 @@ export default function RootLayout({
       </head>
       <body
         className={cn(
-          'min-h-screen bg-background  antialiased',
+          'min-h-screen bg-background  antialiased flex',
           roboto.className,
         )}
       >
         <Wrapper>
           <Navbar />
+          <Sidebar/>
           {children}
         </Wrapper>
       </body>

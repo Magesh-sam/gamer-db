@@ -15,3 +15,9 @@ export type GameCardProps = {
     name: string;
   }[];
 };
+
+export type GenresProps = {
+  id: number;
+  slug: string;
+  name: string;
+};

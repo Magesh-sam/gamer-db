@@ -2,11 +2,11 @@ import { GameCardProps } from '@/lib/types';
 import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
-import PlaceholderImage from '@/public/placeholder.webp';
 
 function GameCard({ slug, name, img, genres }: GameCardProps) {
   return (
     <div className="flex flex-col max-w-[300px]">
+      <Link href={`/${slug}`} className="mt-3 text-xl text-primary hover:text-primary/80">
       <Image
         src={img || '/placeholder.webp'}
         alt="gamer db logo"
@@ -16,8 +16,7 @@ function GameCard({ slug, name, img, genres }: GameCardProps) {
         placeholder="blur"
         blurDataURL={img || '/placeholder.webp'}
       />
-      <Link href={`/${slug}`} className="mt-3 text-xl text-primary">
-        {name}
+        <span className='mt-2'>{name}</span>
       </Link>
 
       {genres?.length > 0 && (
@@ -26,7 +25,7 @@ function GameCard({ slug, name, img, genres }: GameCardProps) {
             <Link
               key={genre.id}
               href={genre.slug}
-              className="hover:underline underline-offset-4 hover:text-primary"
+              className="hover:underline underline-offset-4 hover:text-primary text-white/75"
             >
               {genre.name}
             </Link>
