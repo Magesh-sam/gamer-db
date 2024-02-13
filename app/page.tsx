@@ -3,6 +3,7 @@ import RAWG from '@/lib/axios';
 import { NewUpcomingGameCardProps } from '@/lib/types';
 import NewUpcomingGameCarousel from '@/components/NewUpcomingGames/NewUpcomingGameCarousel';
 import GameCardContainer from '@/components/GameCard/GameCardContainer';
+import Main from '@/components/Main';
 
 interface IGame {
   id: number;
@@ -33,7 +34,7 @@ async function page() {
     console.log('error', error);
   }
   return (
-    <main className="flex flex-col container mt-20 ">
+    <Main className="flex flex-col container mt-20 ">
       <h1 className="text-center text-5xl font-bold my-5 text-primary">
         Gamer-DB
       </h1>
@@ -50,7 +51,7 @@ async function page() {
           <GameCardContainer />
         </Suspense>
       </section>
-    </main>
+    </Main>
   );
 }
 

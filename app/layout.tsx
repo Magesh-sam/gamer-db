@@ -65,7 +65,7 @@ export default function RootLayout({
       </head>
       <body
         className={cn(
-          'min-h-screen bg-background  antialiased flex',
+          'min-h-screen bg-background  antialiased grid grid-flow-col',
           roboto.className,
         )}
       >

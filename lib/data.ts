@@ -1,18 +1,22 @@
 export const sideNavbarCategories = [
   {
-    name: 'Genres',
-    href: '/genres',
+    name: "Games",
+    href: "/",
   },
   {
-    name: 'Platforms',
-    href: '/platforms',
+    name: "Genres",
+    href: "/genres",
   },
   {
-    name: 'Developers',
-    href: '/developers',
+    name: "Platforms",
+    href: "/platforms",
   },
   {
-    name: 'Publishers',
-    href: '/publishers',
+    name: "Developers",
+    href: "/developers",
+  },
+  {
+    name: "Publishers",
+    href: "/publishers",
   },
 ];

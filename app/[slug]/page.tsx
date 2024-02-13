@@ -1,5 +1,6 @@
 import About from '@/components/GameDetailsComponents/About';
 import Details from '@/components/GameDetailsComponents/Details';
+import Main from '@/components/Main';
 
 import RAWG from '@/lib/axios';
 import { reverseDate } from '@/lib/helper';
@@ -14,7 +15,7 @@ async function page({ params }: { params: { slug: string } }) {
   );
   const tags = await gameData.tags.map((tag: { name: string }) => tag.name);
   return (
-    <main className="flex flex-col container mt-20 min-h-screen mb-20 ">
+    <Main>
       <h1 className="text-5xl font-bold mb-3 text-primary hover:text-primary/80 ">
         {gameData.name}
       </h1>
@@ -34,7 +35,7 @@ async function page({ params }: { params: { slug: string } }) {
       </div>
       <About html={gameData.description} />
       {/* <Genres genres={gameData.genres}  /> */}
-    </main>
+    </Main>
   );
 }
 
