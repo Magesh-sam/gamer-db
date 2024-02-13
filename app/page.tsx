@@ -1,8 +1,8 @@
 import React, { Suspense } from 'react';
 import RAWG from '@/lib/axios';
 import { NewUpcomingGameCardProps } from '@/lib/types';
-import NewUpcomingGameCarousel from '@/components/ui/NewUpcomingGames/NewUpcomingGameCarousel';
-import GameCardContainer from '@/components/ui/GameCard/GameCardContainer';
+import NewUpcomingGameCarousel from '@/components/NewUpcomingGames/NewUpcomingGameCarousel';
+import GameCardContainer from '@/components/GameCard/GameCardContainer';
 
 interface IGame {
   id: number;
@@ -39,8 +39,8 @@ async function page() {
       </h1>
 
       <section className="container mx-auto">
-        <h2 className="text-2xl font-semibold mb-4 f  irst-letter:text-primary">
-          New Upcoming Games!
+        <h2 className="text-2xl font-semibold mb-4 first-letter:text-primary">
+          New Upcoming Games <span className='text-primary'>!</span>
         </h2>
 
         <Suspense fallback={<div>Loading...</div>}>

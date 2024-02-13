@@ -7,6 +7,8 @@ import GameCard from './GameCard';
 import axios from 'axios';
 import LoadMoreSkeleton from '@/components/Skeletons/LoadMoreSkeleton';
 
+
+const APIKEY = process.env.NEXT_PUBLIC_RAWG_API_KEY
 interface IGameCard {
   id: number;
   name: string;
@@ -20,15 +22,10 @@ interface IGameCard {
 }
 
 const fetchGames = async ({ pageParam }: { pageParam: number }) => {
-  // return RAWG.get('games', {
-  //     params: {
-  //         "page": pageParam,
-  //         "page_size":"40"
-  //     },
-  // }).then(res => res.data);
+
   return axios
     .get(
-      `https://api.rawg.io/api/games?key=c542e67aec3a4340908f9de9e86038af&page=${pageParam}&page_size=40`,
+      `https://api.rawg.io/api/games?key=${APIKEY}&page=${pageParam}&page_size=40`,
     )
     .then((res) => res.data);
 };
@@ -46,15 +43,18 @@ function GameCardContainer() {
   } = useInfiniteQuery({
     queryKey: ['projects'],
     queryFn: fetchGames,
+    refetchOnWindowFocus:false,
     initialPageParam: 1,
     getNextPageParam: (lastPage) => lastPage.next,
+    
   });
 
   if (isLoading) {
     return <LoadMoreSkeleton />;
   }
   if (isError) {
-    return <p>Error: {error.message}</p>;
+    return <p className='bg-red-400 text-black  font-semibold
+     w-full text-center px-3 py-2 '>Error: {error.message}</p>;
   }
 
   return (
