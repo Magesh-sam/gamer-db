@@ -1,10 +1,8 @@
-import Main from '@/components/Main'
-import React from 'react'
+import Main from '@/components/Main';
+import React from 'react';
 
 function Publishers() {
-  return (
-    <Main>Publishers</Main>
-  )
+  return <Main>Publishers</Main>;
 }
 
-export default Publishers
+export default Publishers;
