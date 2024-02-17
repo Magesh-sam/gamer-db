@@ -3,7 +3,7 @@ import RAWG from '@/lib/axios';
 import { NewUpcomingGameCardProps } from '@/lib/types';
 import NewUpcomingGameCarousel from '@/components/NewUpcomingGames/NewUpcomingGameCarousel';
 import GameCardContainer from '@/components/GameCard/GameCardContainer';
-import Main from '@/components/Main';
+import Main from '@/components/PageComponents/Main';
 
 interface IGame {
   id: number;

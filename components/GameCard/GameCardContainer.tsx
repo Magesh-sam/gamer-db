@@ -1,7 +1,5 @@
 'use client';
-import RAWG from '@/lib/axios';
 import { useInfiniteQuery } from '@tanstack/react-query';
-import { ReactQueryDevtools } from '@tanstack/react-query-devtools';
 import React from 'react';
 import GameCard from './GameCard';
 import axios from 'axios';
@@ -61,9 +59,9 @@ function GameCardContainer() {
   }
 
   return (
-    <div className="flex flex-col">
+    <div className="flex flex-col ">
       {data?.pages.map((page, i) => (
-        <div className="flex flex-wrap gap-5 mt-5" key={i}>
+        <div className="flex flex-wrap gap-5 mt-5 mb-10" key={i}>
           {page.results.map((game: IGameCard) => (
             <>
               <GameCard
@@ -82,7 +80,7 @@ function GameCardContainer() {
       <button
         onClick={() => fetchNextPage()}
         disabled={!hasNextPage || isFetchingNextPage}
-        className="mx-auto bg-primary text-black px-3 py-1 rounded-md my-3"
+        className="mx-auto bg-primary text-black px-3 py-1 rounded-md  hover:bg-primary/90"
       >
         {isFetchingNextPage
           ? 'Loading more...'
@@ -92,7 +90,6 @@ function GameCardContainer() {
       </button>
 
       <div>{isFetching && !isFetchingNextPage ? 'Fetching...' : null}</div>
-      <ReactQueryDevtools initialIsOpen={false} />
     </div>
   );
 }

@@ -21,3 +21,31 @@ export type GenresProps = {
   slug: string;
   name: string;
 };
+
+export interface IScreenschots {
+  screenshots: screenshot[];
+}
+export type screenshot = {
+  id: number;
+  image: string;
+  width: number;
+  height: number;
+  is_deleted: boolean;
+};
+
+export interface INavLink extends React.HTMLProps<HTMLAnchorElement> {
+  category: {
+    name: string;
+    href: string;
+  };
+}
+
+export type RatingProps = {
+  id: number;
+  title: string;
+  count: number;
+  percent: number;
+};
+export interface IRating {
+  ratings: RatingProps[];
+}
