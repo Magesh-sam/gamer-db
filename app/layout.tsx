@@ -25,7 +25,7 @@ export const metadata: Metadata = {
     siteName: 'Gamer DB',
     images: [
       {
-        url: '/placeholder.webp',
+        url: 'https://gamer-db.vercel.app/placeholder.webp',
         width: 1200,
         height: 630,
       },
@@ -49,7 +49,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     description:
       "Gamer's Paradise - Find your favourite games all at one place!",
-    images: ['/placeholder.webp'],
+    images: ['https://gamer-db.vercel.app/placeholder.webp'],
   },
 };
 
