@@ -8,7 +8,6 @@ import { GameCardProps } from '@/lib/types';
 
 const APIKEY = process.env.NEXT_PUBLIC_RAWG_API_KEY;
 
-
 const fetchGames = async ({ pageParam }: { pageParam: number }) => {
   return axios
     .get(

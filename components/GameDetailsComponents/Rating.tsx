@@ -28,7 +28,6 @@ const Rating: FC<IRating> = ({ ratings }) => {
       >
         Meh
       </span>
-  
     </div>
   );
 };
