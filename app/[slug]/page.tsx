@@ -2,6 +2,7 @@ import About from '@/components/GameDetailsComponents/About';
 import Details from '@/components/GameDetailsComponents/Details';
 import Rating from '@/components/GameDetailsComponents/Rating';
 import Screenshots from '@/components/GameDetailsComponents/Screenshots';
+import GameSeriesContainer from '@/components/GameSeries/GameSeriesContainer';
 import Main from '@/components/PageComponents/Main';
 
 import RAWG from '@/lib/axios';
@@ -44,6 +45,8 @@ async function page({ params }: { params: { slug: string } }) {
       />
       <About html={gameData.description} />
       <Screenshots screenshots={screenshots} />
+
+      <GameSeriesContainer slug={params.slug} />
     </Main>
   );
 }

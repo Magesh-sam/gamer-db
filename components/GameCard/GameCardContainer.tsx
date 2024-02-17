@@ -4,19 +4,10 @@ import React from 'react';
 import GameCard from './GameCard';
 import axios from 'axios';
 import LoadMoreSkeleton from '@/components/Skeletons/LoadMoreSkeleton';
+import { GameCardProps } from '@/lib/types';
 
 const APIKEY = process.env.NEXT_PUBLIC_RAWG_API_KEY;
-interface IGameCard {
-  id: number;
-  name: string;
-  background_image: string;
-  slug: string;
-  genres: {
-    id: number;
-    slug: string;
-    name: string;
-  }[];
-}
+
 
 const fetchGames = async ({ pageParam }: { pageParam: number }) => {
   return axios
@@ -62,13 +53,13 @@ function GameCardContainer() {
     <div className="flex flex-col ">
       {data?.pages.map((page, i) => (
         <div className="flex flex-wrap gap-5 mt-5 mb-10" key={i}>
-          {page.results.map((game: IGameCard) => (
+          {page.results.map((game: GameCardProps) => (
             <>
               <GameCard
                 key={game.id}
                 id={game.id}
                 slug={game.slug}
-                img={game.background_image}
+                background_image={game.background_image}
                 name={game.name}
                 genres={game.genres}
               />

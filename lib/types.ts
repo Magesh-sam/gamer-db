@@ -8,7 +8,7 @@ export type GameCardProps = {
   id: number;
   slug: string;
   name: string;
-  img: string;
+  background_image: string;
   genres: {
     id: number;
     slug: string;
@@ -49,3 +49,10 @@ export type RatingProps = {
 export interface IRating {
   ratings: RatingProps[];
 }
+
+export type GameSeriesProps = {
+  id: number;
+  name: string;
+  slug: string;
+  background_image: string;
+};

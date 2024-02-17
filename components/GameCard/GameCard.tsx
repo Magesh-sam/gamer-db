@@ -3,7 +3,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
 
-function GameCard({ slug, name, img, genres }: GameCardProps) {
+function GameCard({ slug, name, background_image, genres }: GameCardProps) {
   return (
     <div className="flex flex-col max-w-[300px]">
       <Link
@@ -11,13 +11,13 @@ function GameCard({ slug, name, img, genres }: GameCardProps) {
         className="mt-3 text-xl text-primary hover:text-primary/80"
       >
         <Image
-          src={img || '/placeholder.webp'}
+          src={background_image || '/placeholder.webp'}
           alt="gamer db logo"
           width={300}
           height={230}
           className=" rounded-sm object-fill w-[300px] h-[230px]"
           placeholder="blur"
-          blurDataURL={img || '/placeholder.webp'}
+          blurDataURL={background_image || '/placeholder.webp'}
         />
         <span className="mt-2">{name}</span>
       </Link>

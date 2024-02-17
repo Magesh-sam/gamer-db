@@ -1,12 +1,10 @@
 import { IRating } from '@/lib/types';
-import { cn } from '@/lib/utils';
 import React, { FC } from 'react';
 
 const Rating: FC<IRating> = ({ ratings }) => {
   const w1 = `${Math.floor(ratings[0].percent)}`;
   const w2 = `${Math.floor(ratings[1].percent)}`;
   const w3 = `${Math.floor(ratings[2].percent)}`;
-  const w4 = `${Math.floor(ratings[3].percent)}`;
   return (
     <div className=" flex  w-full   mb-3 overflow-x-auto ">
       <span
@@ -30,13 +28,7 @@ const Rating: FC<IRating> = ({ ratings }) => {
       >
         Meh
       </span>
-      <span
-        title={`${w4}%`}
-        style={{ width: `${w4}rem` }}
-        className={'    text-sm p-1  bg-pink-400'}
-      >
-        skip
-      </span>
+  
     </div>
   );
 };
