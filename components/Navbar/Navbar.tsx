@@ -7,7 +7,7 @@ import NavItems from './NavItems';
 function Navbar() {
   return (
     <nav className=" col-span-2 flex px-5 justify-between py-5 backdrop-blur-md fixed top-0 left-0 w-full z-50">
-      <div className='flex items-center gap-5'>
+      <div className="flex items-center gap-5">
         <div className="flex items-center gap-1">
           <Image
             src="/Gamer-DB.png"
@@ -24,7 +24,7 @@ function Navbar() {
             Gamer DB
           </Link>
         </div>
-        <NavItems/>
+        <NavItems />
       </div>
       <Sidebar />
     </nav>

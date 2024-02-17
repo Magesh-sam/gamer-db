@@ -3,9 +3,11 @@ import PageHeader from '@/components/PageComponents/PageHeader';
 import React from 'react';
 
 function Genres() {
-  return <Main>
-    <PageHeader title="Genres"/>
-  </Main>;
+  return (
+    <Main>
+      <PageHeader title="Genres" />
+    </Main>
+  );
 }
 
 export default Genres;

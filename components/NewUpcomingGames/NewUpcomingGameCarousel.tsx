@@ -23,7 +23,7 @@ function NewUpcomingGameCarousel({
     <Carousel
       plugins={[plugin.current, WheelGesturesPlugin()]}
       opts={{ loop: true }}
-      className='container'
+      className="container"
     >
       <CarouselContent>
         {games?.map((game) => (

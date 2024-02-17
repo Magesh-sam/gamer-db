@@ -69,11 +69,9 @@ export default function RootLayout({
           roboto.className,
         )}
       >
-          <Navbar />
-        <Wrapper>
-          {children}
-        </Wrapper>
-          <BackToTop/>
+        <Navbar />
+        <Wrapper>{children}</Wrapper>
+        <BackToTop />
       </body>
     </html>
   );

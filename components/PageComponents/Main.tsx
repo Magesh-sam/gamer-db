@@ -8,10 +8,12 @@ interface IMain extends React.ComponentPropsWithoutRef<'div'> {
 const Main: FC<IMain> = ({ children, className, ...props }) => {
   return (
     <main
-      className={cn('container min-h-screen my-20 flex flex-col mx-auto  ', className)}
+      className={cn(
+        'container min-h-screen my-20 flex flex-col mx-auto  ',
+        className,
+      )}
       {...props}
     >
-
       {children}
     </main>
   );

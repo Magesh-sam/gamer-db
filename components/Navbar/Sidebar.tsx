@@ -13,7 +13,7 @@ import Link from 'next/link';
 function Sidebar() {
   return (
     <Sheet>
-      <SheetTrigger  aria-label="Open Sidebar">
+      <SheetTrigger aria-label="Open Sidebar">
         <Menu className="text-primary block md:hidden" />
       </SheetTrigger>
       <SheetContent>

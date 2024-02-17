@@ -3,9 +3,11 @@ import PageHeader from '@/components/PageComponents/PageHeader';
 import React from 'react';
 
 function Platforms() {
-  return <Main>
-    <PageHeader title="Platforms"/>
-  </Main>;
+  return (
+    <Main>
+      <PageHeader title="Platforms" />
+    </Main>
+  );
 }
 
 export default Platforms;
